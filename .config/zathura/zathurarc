@@ -38,4 +38,4 @@ set recolor-lightcolor "#1B2B34"
 map <F5> recolor # toggle between light and dark mode
 map <A-o> feedkeys ":exec okular $FILE<Return>" # open current file in Okular
 map <A-e> feedkeys ":exec xdg-open .<Return>" # open the file location
-map <A-t> feedkeys ":exec konsole<Return>" # open konsole in the file location
+map <A-t> feedkeys ":exec kitty<Return>" # open konsole in the file location
