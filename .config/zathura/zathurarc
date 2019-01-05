@@ -1,0 +1,41 @@
+
+# General
+set recolor "false"
+set statusbar-home-tilde "true"
+set n-completion-items 20
+set smooth-scroll "true" # smooth scrolling with touchpad gtk >= 3.4
+set show-recent 5 # number of recent docs to show in completion
+
+# Zathura's look
+set default-bg "#1B2B34"
+set default-fg "#FFFFFF"
+set statusbar-bg "#1B2B34"
+set statusbar-fg "#FFFFFF"
+set inputbar-bg "#1B2B34"
+set inputbar-fg "#62B3B2"
+set completion-bg "#1B2B34"
+set completion-fg "#FFFFFF"
+set completion-group-bg "#7BA1CB"
+set completion-group-fg "#1B2B34"
+set completion-highlight-fg "#FFFFFF"
+set completion-highlight-bg "#62B3B2"
+set notification-bg "#1B2B34"
+set notification-fg "#FAC863"
+set notification-error-bg "#E45D65"
+set notification-error-fg "#1B2B34"
+set notification-warning-bg "#FAC863"
+set notification-warning-fg "#1B2B34"
+set highlight-color "#80c782"
+set highlight-active-color "#00EBEB"
+set highlight-transparency 0.5 
+set tabbar-fg "#62B3B2"
+set tabbar-bg "#1B2B34"
+set tabbar-focus-fg "#000000"
+set tabbar-focus-bg "#62B3B2"
+set recolor-lightcolor "#1B2B34"
+
+# Keyboard shortcuts
+map <F5> recolor # toggle between light and dark mode
+map <A-o> feedkeys ":exec okular $FILE<Return>" # open current file in Okular
+map <A-e> feedkeys ":exec xdg-open .<Return>" # open the file location
+map <A-t> feedkeys ":exec konsole<Return>" # open konsole in the file location
