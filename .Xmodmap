@@ -1,0 +1,9 @@
+keycode  43 = h H h H Left Left
+keycode  44 = j J j J Down Down
+keycode  45 = k K k K Up Up
+keycode  46 = l L l L Right Right
+keycode  30 = u U u U Prior Prior
+keycode  40 = d D d D Next Next
+keycode  38 = a A a A Home Home
+keycode  26 = e E e E End End
+
