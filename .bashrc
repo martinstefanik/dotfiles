@@ -2,6 +2,12 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Disble ctrl-s and ctrl-q
+stty -ixon
+
+# Allow for omitting of 'cd' when changing directories
+shopt -s autocd
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -22,10 +28,6 @@ HISTFILESIZE=2000
 # Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
 
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -101,6 +103,7 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+# Alias for interacting with a bare git repo for dotfile management
 alias config='/usr/bin/git --git-dir=/home/martin/.cfg/ --work-tree=/home/martin'
 
 # Enable programmable completion features (you don't need to enable
