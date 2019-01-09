@@ -104,7 +104,7 @@ alias l='ls -CF'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias for interacting with a bare git repo for dotfile management
-alias config='/usr/bin/git --git-dir=/home/martin/.cfg/ --work-tree=/home/martin'
+alias config='/usr/bin/git --git-dir="${HOME}"/.cfg/ --work-tree="${HOME}"'
 
 # Enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
