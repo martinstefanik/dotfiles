@@ -3,6 +3,9 @@
 # Set environmental variables
 export EDITOR=nvim
 export VISUAL=nvim
+export TERMINAL=kitty
+export BROWSER=firefox
+export READER=zathura
 
 # Disble ctrl-s and ctrl-q
 stty -ixon
