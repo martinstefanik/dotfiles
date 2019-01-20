@@ -6,6 +6,7 @@ export VISUAL=nvim
 export TERMINAL=kitty
 export BROWSER=firefox
 export READER=zathura
+export FILE=dolphin
 
 # The line above ensures you have all the standard system settings for the
 # programs, like a usefull $PATH and the like. It also writes out the current
@@ -97,7 +98,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias ll='ls -alhF'
+alias ll='ls -AlhF'
 alias la='ls -A'
 alias l='ls -CF'
 alias cl='clear'
