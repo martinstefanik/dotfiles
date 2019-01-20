@@ -3,6 +3,9 @@
 # Set environmental variables
 export EDITOR=nvim
 export VISUAL=nvim
+export TERMINAL=kitty
+export BROWSER=firefox
+export READER=zathura
 
 # The line above ensures you have all the standard system settings for the
 # programs, like a usefull $PATH and the like. It also writes out the current
