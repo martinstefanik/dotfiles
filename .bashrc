@@ -6,6 +6,7 @@ export VISUAL=nvim
 export TERMINAL=kitty
 export BROWSER=firefox
 export READER=zathura
+export FILE=dolphin
 
 # Disble ctrl-s and ctrl-q
 stty -ixon
@@ -92,7 +93,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias ll='ls -alhF'
+alias ll='ls -AlhF'
 alias la='ls -A'
 alias l='ls -CF'
 alias cl='clear'
