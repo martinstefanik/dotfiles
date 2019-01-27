@@ -1,0 +1,29 @@
+rofi.modi: combi
+rofi.width: 50
+rofi.lines: 5
+rofi.columns: 1
+rofi.font: Noto Sans Medium 36
+rofi.bw: 0
+rofi.location: 2
+rofi.yoffset: 200
+rofi.xoffset: 0
+rofi.fixed-num-lines: false
+rofi.show-icons: true
+rofi.case-sensitive: false
+rofi.cycle: true
+rofi.auto-select: false
+rofi.combi-modi: drun,window,ssh
+rofi.separator-style: none
+rofi.fullscreen: false
+rofi.click-to-exit: true
+rofi.show-match: true
+rofi.theme: nord-like-simple
+rofi.max-history-size: 10
+rofi.combi-hide-mode-prefix: false
+rofi.matching-negate-char: _
+rofi.display-window: w              
+rofi.display-windowcd: w 
+rofi.display-run:
+rofi.display-ssh:
+rofi.display-drun:
+rofi.display-combi:

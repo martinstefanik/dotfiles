@@ -68,8 +68,8 @@ bindsym $mod+t exec $term
 # Start the browser
 bindsym $mod+i exec $browser
 
-# Start krunner
-bindsym $mod+d exec krunner
+# Start launcher - comment out if keybound in KDE
+# bindsym $mod+d exec rofi -show
 
 # Kill the focused window
 bindsym $mod+q kill
