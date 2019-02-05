@@ -4,4 +4,4 @@
 export KDEWM=/usr/bin/i3
 
 # Start the compton compositor
-compton & --config ~/.config/compton/compton.conf
+compton -b --config ~/.config/compton/compton.conf --blur-kern $(cat ~/.config/compton/gaussian-kernel-15x15)
