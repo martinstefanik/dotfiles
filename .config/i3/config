@@ -1,0 +1,199 @@
+# See https://i3wm.org/docs/userguide.html for a complete config reference
+# Avoid inline comments
+
+## VARIABLES #######################
+
+# Set general variables
+set $mod Mod4
+set $term --no-startup-id $TERMINAL
+set $browser --no-startup-id $BROWSER
+set $file --no-startup-id $FILE
+
+# Set workspace variables
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+
+## VISUAL BEHAVIOR #################
+
+# Font for window titles
+font pango:Noto Sans 9
+
+# Set default focus border width
+default_border pixel 2
+
+# Set deafault gaps between windows
+gaps inner 5
+gaps outer 0
+
+# Initial unclutter
+exec --no-startup-id unclutter
+
+# Starting up with i3-gaps
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/landscapes/1490441013011.jpg
+exec --no-startup-id wmctrl -c Plasma
+for_window [title="Desktop — Plasma"] kill; floating enable
+
+# Avoid tiling popups and dropdown windows from plasma
+for_window [class="plasmashell"] floating enable
+for_window [class="Plasma"] floating enable
+for_window [title="plasma-desktop"] floating enable
+for_window [title="win7"] floating enable
+for_window [class="krunner"] floating enable
+for_window [class="Kmix"] floating enable
+for_window [class="Klipper"] floating enable
+for_window [class="Plasmoidviewer"] floating enable
+for_window [class="activities"] floating enable
+
+# Additional window settings
+for_window [class="lattedock"] floating enable
+for_window [instance="dropdown_*"] floating enable
+for_window [instance="dropdown_*"] sticky enable
+
+## KEYBINDINGS #####################
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Start a terminal
+bindsym $mod+Return exec $term
+bindsym $mod+t exec $term
+
+# Start the browser
+bindsym $mod+i exec $browser
+
+# Start launcher - comment out if keybound in KDE
+# bindsym $mod+d exec rofi -show
+
+# Kill the focused window
+bindsym $mod+q kill
+bindsym $mod+Shift+q kill
+
+# Change focused window - vim bindings
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused window - vim bindings
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Split new windows in horizontal direction
+bindsym $mod+apostrophe split h
+
+# Split new windows in vertical direction
+bindsym $mod+slash split v
+
+# Toggle fullscreen mode for the focused window
+bindsym $mod+f fullscreen toggle
+
+# Change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# Change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# Focus the parent window
+bindsym $mod+a focus parent
+
+# Switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 worskpace $ws9
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+semicolon workspace next
+bindsym $mod+comma workspace prev
+
+# Move the focused window to a given workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Restart i3 in place 
+bindsym $mod+Shift+r restart
+
+# Resize window
+bindsym $mod+r mode "resize"
+mode "resize" {
+    bindsym h resize grow width 5 px or 1 ppt
+    bindsym j resize shrink height 5 px or 1 ppt
+    bindsym k resize grow height 5 px or 1 ppt
+    bindsym l resize shrink width 5 px or 1 ppt
+    bindsym Left resize shrink width 5 px or 1 ppt
+    bindsym Down resize grow height 5 px or 1 ppt
+    bindsym Up resize shrink height 5 px or 1 ppt
+    bindsym Right resize grow width 5 px or 1 ppt
+
+    # Back to normal mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+    bindsym $mod+m mode "move" focus floating
+    bindsym $mod+u mode "launch"
+}
+
+# Move mode - better for moving floating windows
+bindsym $mod+m mode "move" focus floating
+mode "move" {
+    bindsym h move left
+    bindsym j move down
+    bindsym k move up
+    bindsym l move right
+    bindsym Left move left
+    bindsym Down move down
+    bindsym Up move up
+    bindsym Right move right
+
+    # Back to normal mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+m mode "default"
+    bindsym $mod+u mode "launch"
+    bindsym $mod+r mode "resize"
+}
+
+# Launch mode - for launching most frequently used applications
+bindsym $mod+u mode "launch"
+mode "launch" {
+    bindsym i exec $browser; mode "default" 
+    bindsym e exec $file; mode "default" 
+    bindsym s exec systemsettings5; mode "default" 
+    bindsym m exec spotify; mode "default" 
+}
