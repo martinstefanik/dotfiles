@@ -5,6 +5,7 @@ set statusbar-home-tilde "true"
 set n-completion-items 20
 set smooth-scroll "true" # smooth scrolling with touchpad gtk >= 3.4
 set show-recent 5 # number of recent docs to show in completion
+set selection-clipboard clipboard # automatically copy selection to clipboard
 
 # Zathura's look
 set default-bg "#1B2B34"
