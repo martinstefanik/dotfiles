@@ -29,14 +29,14 @@ font pango:Noto Sans 9
 default_border pixel 2
 
 # Set deafault gaps between windows
-gaps inner 5
+gaps inner 0
 gaps outer 0
 
 # Initial unclutter
 exec --no-startup-id unclutter
 
 # Starting up with i3-gaps
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/landscapes/1490441013011.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/vibrant/3d.jpg
 exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable
 
