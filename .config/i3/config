@@ -36,7 +36,7 @@ gaps outer 0
 exec --no-startup-id unclutter
 
 # Starting up with i3-gaps
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/vibrant/3d.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/landscapes/1491169480329.jpg
 exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable
 
