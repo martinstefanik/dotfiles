@@ -8,9 +8,6 @@ export BROWSER=firefox
 export READER=zathura
 export FILE=dolphin
 
-# Extend the PATH variable
-export PATH=$PATH:/home/martin/Documents/scripts
-
 # Disble ctrl-s and ctrl-q
 stty -ixon
 
