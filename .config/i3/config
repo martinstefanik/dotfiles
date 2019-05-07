@@ -55,6 +55,15 @@ for_window [class="activities"] floating enable
 for_window [class="lattedock"] floating enable
 for_window [instance="dropdown_*"] floating enable
 for_window [instance="dropdown_*"] sticky enable
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_role="About"] floating enable 
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+no_focus [class="plasmashell"]
+for_window [class="plasmashell" window_type="notification"] floating enable, move right 850px, move up 600px
 
 ## KEYBINDINGS #####################
 
