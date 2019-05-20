@@ -116,7 +116,16 @@ if ! shopt -oq posix; then
 fi
 
 # Bash completion for additional command line tools 
-eval "$(pandoc --bash-completion)"
+if type pandoc > /dev/null; then
+    eval "$(pandoc --bash-completion)"
+fi
 
 # Bash completion for kitty
-source <(kitty + complete setup bash)
+if type kitty > /dev/null; then
+    source <(kitty + complete setup bash)
+fi
+
+# Pipenv completion
+if type pipenv > /dev/null; then
+    eval "$(pipenv --completion)"
+fi
