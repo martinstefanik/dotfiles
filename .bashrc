@@ -9,7 +9,7 @@ export READER=zathura
 export FILE=dolphin
 
 # Extend the PATH variable
-export PATH=$PATH:/home/martin/Documents/scripts
+export PATH=$PATH:/home/martin/Documents/scripts:/home/martin/.local/bin
 
 # Disble ctrl-s and ctrl-q
 stty -ixon
