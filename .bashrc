@@ -7,9 +7,10 @@ export TERMINAL=kitty
 export BROWSER=firefox
 export READER=zathura
 export FILE=nautilus
+export PYENV_ROOT=$HOME/.pyenv
 
 # Extend the PATH variable
-export PATH=$PATH:/scratch/users/stmartin/.local/bin
+export PATH=$PYENV_ROOT/bin:$PATH:/scratch/users/stmartin/.local/bin
 
 # The line above ensures you have all the standard system settings for the
 # programs, like a usefull $PATH and the like. It also writes out the current
@@ -133,4 +134,10 @@ fi
 # Pipenv completion
 if command -v pipenv > /dev/null; then
     eval "$(pipenv --completion)"
+fi
+
+# Enable shims and pyenv autocompletion
+# See https://github.com/pyenv/pyenv#installation for more info
+if command -v pyenv 1> /dev/null 2>&1; then
+    eval "$(pyenv init -)"
 fi
