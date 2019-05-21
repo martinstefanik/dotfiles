@@ -8,6 +8,9 @@ export BROWSER=firefox
 export READER=zathura
 export FILE=nautilus
 
+# Extend the PATH variable
+export PATH=$PATH:/scratch/users/stmartin/.local/bin
+
 # The line above ensures you have all the standard system settings for the
 # programs, like a usefull $PATH and the like. It also writes out the current
 # D-MATH messages.
