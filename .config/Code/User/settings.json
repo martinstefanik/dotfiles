@@ -1,0 +1,101 @@
+{   
+    // Extensions:
+    // - autoDocstring
+    // - Code Spell Checker
+    // - LaTeX Workshop
+    // - Linux Themes for VS Code
+    // - Python
+    // - Vim
+    // - VSCode Great Icons
+
+    // General non-visual settings
+    "editor.cursorBlinking": "solid",
+    "editor.smoothScrolling": true,
+    "editor.wordWrap": "on",
+    "explorer.confirmDelete": false,
+    "files.autoSave": "onWindowChange",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    // General visual settings
+    "editor.fontSize": 13,
+    "editor.minimap.enabled": false,
+    "editor.renderIndentGuides": false,
+    "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Arc Dark",
+    "workbench.iconTheme": "vscode-great-icons",
+
+    // Code Spell Checker
+    "cSpell.numSuggestions": 5,
+    "cSpell.languageSettings": [
+        {
+            // Python settings
+            "languageId": "python",
+            "ignoreRegExpList": [
+                "^import .*",
+                "^import .* as .*",
+                "^from .* import .*"
+            ]
+        },
+        {
+            // LaTeX settings
+            "languageId": "latex",
+            "ignoreRegExpList": [
+                "\\\\[a-zA-Z]*"
+            ]
+        },
+    ],
+
+    // Python specific
+    "autoDocstring.docstringFormat": "google",
+    "python.autoComplete.addBrackets": true,
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.minimap.enabled": true,
+        "editor.rulers": [80],
+    },
+    "python.pythonPath": "/usr/bin/python3",
+    "workbench.startupEditor": "newUntitledFile",
+
+    // LaTeX specific
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.gz" 
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    
+    //Vim
+    "vim.insertModeKeyBindings": [
+     {
+         "before": ["j", "j"],
+         "after": ["<esc>"]
+     }
+],
+"cSpell.userWords": [
+    "Docstring",
+    "Stefanik",
+    "latexmk"
+],
+"python.dataScience.sendSelectionToInteractiveWindow": true,
+"cSpell.allowCompoundWords": true,
+"autoDocstring.startOnNewLine": true
+}
