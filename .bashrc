@@ -7,9 +7,10 @@ export TERMINAL=kitty
 export BROWSER=firefox
 export READER=zathura
 export FILE=dolphin
+export PYENV_ROOT=$HOME/.pyenv
 
 # Extend the PATH variable
-export PATH=$PATH:/home/martin/Documents/scripts:/home/martin/.local/bin
+export PATH=$PYENV_ROOT/bin:$PATH:/home/martin/Documents/scripts:/home/martin/.local/bin
 
 # Disble ctrl-s and ctrl-q
 stty -ixon
@@ -116,16 +117,13 @@ if ! shopt -oq posix; then
 fi
 
 # Bash completion for additional command line tools 
-if command -v pandoc > /dev/null; then
-    eval "$(pandoc --bash-completion)"
-fi
+eval "$(pandoc --bash-completion)"
 
 # Bash completion for kitty
-if command -v kitty > /dev/null; then
-    source <(kitty + complete setup bash)
-fi
+source <(kitty + complete setup bash)
 
 # Pipenv completion
-if command -v pipenv > /dev/null; then
-    eval "$(pipenv --completion)"
-fi
+eval "$(pipenv --completion)"
+
+# pyenv completion
+eval "$(pyenv init -)"
