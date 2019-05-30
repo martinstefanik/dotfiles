@@ -294,4 +294,5 @@ augroup FileTemplates
     autocmd BufNewFile *.py 0r ~/.config/nvim/templates/python.skeleton
     autocmd BufNewFile *.md 0r ~/.config/nvim/templates/markdown.skeleton
     autocmd BufNewFile *.tex 0r ~/.config/nvim/templates/latex.skeleton
+    autocmd BufNewFile *.[rR] 0r ~/.config/nvim/templates/r.skeleton
 augroup END
